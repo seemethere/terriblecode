@@ -4,3 +4,9 @@ title = "TerribleCode by terrible people"
 newContentEditor = "vim"
 theme = "nofancy"
 pygmentsStyle = "native"
+
+[author]
+    name = "Eli Uriegas"
+    github = "seemethere"
+    linkedin = "elias-uriegas"
+    twitter = "Eli_ilE"
