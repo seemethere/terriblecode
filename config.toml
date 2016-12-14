@@ -1,0 +1,6 @@
+languageCode = "en-us"
+baseurl = "terriblecode.com"
+title = "TerribleCode by terrible people"
+newContentEditor = "vim"
+theme = "nofancy"
+pygmentsStyle = "native"
