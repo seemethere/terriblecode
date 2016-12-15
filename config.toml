@@ -33,5 +33,5 @@ pygmentsStyle = "native"
 
 [[menu.social]]
     pre = "<i class='fa fa-linkedin'></i>"
-    url = "http://www.linkedin.com/elias-uriegas"
+    url = "https://www.linkedin.com/in/elias-uriegas"
     identifier = "linkedin"
