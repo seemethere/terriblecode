@@ -4,6 +4,7 @@ title = "terriblecode"
 newContentEditor = "vim"
 theme = "hugo-redlounge"
 pygmentsStyle = "native"
+googleAnalytics = "UA-82077088-1"
 
 [author]
     name = "Eli Uriegas"
