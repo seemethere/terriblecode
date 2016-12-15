@@ -7,6 +7,8 @@ title = "zplug from a former oh-my-zsh user"
 author = "Eli Uriegas"
 authorlink = "http://github.com/seemethere"
 draft = false
+slug = "zplug-from-a-former-oh-my-zsh-user"
+socialsharing = true
 
 +++
 

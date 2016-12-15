@@ -7,6 +7,7 @@ categories = [
 ]
 date = "2016-12-13T22:15:12-06:00"
 slug = "why-ptpython-is-the-only-repl-you-will-ever-need"
+draft = false
 
 +++
 
