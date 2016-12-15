@@ -1,12 +1,37 @@
 languageCode = "en-us"
 baseurl = "terriblecode.com"
-title = "TerribleCode by terrible people"
+title = "terriblecode"
 newContentEditor = "vim"
-theme = "nofancy"
+theme = "hugo-redlounge"
 pygmentsStyle = "native"
 
 [author]
     name = "Eli Uriegas"
-    github = "seemethere"
-    linkedin = "elias-uriegas"
-    twitter = "Eli_ilE"
+    email = "seemethere101@gmail.com"
+
+[params]
+    sidebartitle = "terriblecode"
+    sidebartagline = "Eli Uriegas"
+
+[[menu.main]]
+    name = "Blog"
+    url = "/post"
+
+[[menu.main]]
+    name = "About"
+    url = "/about"
+
+[[menu.social]]
+    pre = "<i class='fa fa-twitter'></i>"
+    url = "http://www.twitter.com/Eli_ilE"
+    identifier = "twitter"
+
+[[menu.social]]
+    pre = "<i class='fa fa-github'></i>"
+    url = "http://www.github.com/seemethere"
+    identifier = "github"
+
+[[menu.social]]
+    pre = "<i class='fa fa-linkedin'></i>"
+    url = "http://www.linkedin.com/elias-uriegas"
+    identifier = "linkedin"
