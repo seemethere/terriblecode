@@ -3,7 +3,6 @@ Tags = ["Development","python"]
 Description = ""
 date = "2017-02-25T14:18:57-06:00"
 title = "Asynchronous HTTP Requests in Python"
-menu = "main"
 Categories = ["Development","python"]
 draft = false
 author = "Eli Uriegas"
