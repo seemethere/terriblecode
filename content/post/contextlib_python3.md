@@ -114,6 +114,7 @@ in action:
 package main
 import "fmt"
 func main() {
+    // Don't execute this until the end of the function
     defer fmt.Println("world")
 
     fmt.Println("hello")
@@ -122,3 +123,9 @@ func main() {
     // world\n
 }
 ```
+
+In python 3 we can do this same sort of action using the `contextlib.ExitStack` 
+context manager!
+
+### Example:
+
