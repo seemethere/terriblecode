@@ -9,6 +9,8 @@ publishdir = "public"
 author = "Eli Uriegas"
 title = "terriblecode"
 disqusshortname = ""
+googleAnalytics = "UA-82077088-1"
+newContentEditor = "nvim"
 pluralizelisttitles = false
 
 [permalinks]
@@ -30,42 +32,3 @@ linkedin = "elias-uriegas"
 twitter = "Eli_ilE"
 social_banner = "img/logo.png"
 latestpostcount = 10
-
-# languageCode = "en-us"
-# baseurl = "terriblecode.com"
-# title = "terriblecode"
-# newContentEditor = "vim"
-# theme = "cocoa-eh"
-# pygmentsStyle = "native"
-# googleAnalytics = "UA-82077088-1"
-
-# [author]
-#     name = "Eli Uriegas"
-#     email = "seemethere101@gmail.com"
-
-# [params]
-#     sidebartitle = "terriblecode"
-#     sidebartagline = "Eli Uriegas"
-
-# [[menu.main]]
-#     name = "Blog"
-#     url = "/post"
-
-# [[menu.main]]
-#     name = "About"
-#     url = "/about"
-
-# [[menu.social]]
-#     pre = "<i class='fa fa-twitter'></i>"
-#     url = "http://www.twitter.com/Eli_ilE"
-#     identifier = "twitter"
-
-# [[menu.social]]
-#     pre = "<i class='fa fa-github'></i>"
-#     url = "http://www.github.com/seemethere"
-#     identifier = "github"
-
-# [[menu.social]]
-#     pre = "<i class='fa fa-linkedin'></i>"
-#     url = "https://www.linkedin.com/in/elias-uriegas"
-#     identifier = "linkedin"
