@@ -1,38 +1,71 @@
-languageCode = "en-us"
-baseurl = "terriblecode.com"
+baseurl = "http://terriblecode.com/"
+theme = "cocoa-eh"
+builddrafts = true
+canonifyurls = true
+contentdir = "content"
+languageCode = "en-US"
+layoutdir = "layouts"
+publishdir = "public"
+author = "Eli Uriegas"
 title = "terriblecode"
-newContentEditor = "vim"
-theme = "hugo-redlounge"
-pygmentsStyle = "native"
-googleAnalytics = "UA-82077088-1"
+disqusshortname = ""
+pluralizelisttitles = false
 
-[author]
-    name = "Eli Uriegas"
-    email = "seemethere101@gmail.com"
+[permalinks]
+blog = "blog/:slug/"
 
 [params]
-    sidebartitle = "terriblecode"
-    sidebartagline = "Eli Uriegas"
+dateform = "Jan 2, 2006"
+dateformfull = "Mon Jan 2 2006 15:04:05 MST"
+description = "Random thoughts about coding and stuff"
+copyright = "Copyright © 2017 Eli Uriegas"
+logofile = "img/logo.png"
+faviconfile = "img/favicon.png"
+highlightjs = true
+progressively = true
+lang = "en"
+github = "seemethere"
+email = "eliasuriegas@gmail.com"
+linkedin = "elias-uriegas"
+twitter = "Eli_ilE"
+social_banner = "img/logo.png"
+latestpostcount = 10
 
-[[menu.main]]
-    name = "Blog"
-    url = "/post"
+# languageCode = "en-us"
+# baseurl = "terriblecode.com"
+# title = "terriblecode"
+# newContentEditor = "vim"
+# theme = "cocoa-eh"
+# pygmentsStyle = "native"
+# googleAnalytics = "UA-82077088-1"
 
-[[menu.main]]
-    name = "About"
-    url = "/about"
+# [author]
+#     name = "Eli Uriegas"
+#     email = "seemethere101@gmail.com"
 
-[[menu.social]]
-    pre = "<i class='fa fa-twitter'></i>"
-    url = "http://www.twitter.com/Eli_ilE"
-    identifier = "twitter"
+# [params]
+#     sidebartitle = "terriblecode"
+#     sidebartagline = "Eli Uriegas"
 
-[[menu.social]]
-    pre = "<i class='fa fa-github'></i>"
-    url = "http://www.github.com/seemethere"
-    identifier = "github"
+# [[menu.main]]
+#     name = "Blog"
+#     url = "/post"
 
-[[menu.social]]
-    pre = "<i class='fa fa-linkedin'></i>"
-    url = "https://www.linkedin.com/in/elias-uriegas"
-    identifier = "linkedin"
+# [[menu.main]]
+#     name = "About"
+#     url = "/about"
+
+# [[menu.social]]
+#     pre = "<i class='fa fa-twitter'></i>"
+#     url = "http://www.twitter.com/Eli_ilE"
+#     identifier = "twitter"
+
+# [[menu.social]]
+#     pre = "<i class='fa fa-github'></i>"
+#     url = "http://www.github.com/seemethere"
+#     identifier = "github"
+
+# [[menu.social]]
+#     pre = "<i class='fa fa-linkedin'></i>"
+#     url = "https://www.linkedin.com/in/elias-uriegas"
+#     identifier = "linkedin"
