@@ -2,4 +2,4 @@
 title = "Home"
 +++
 
-[My](https://github.com/seemethere) random thoughts about coding and stuff
+[My](https://github.com/seemethere) random thoughts about coding and stuff!
