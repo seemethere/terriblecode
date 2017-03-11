@@ -14,7 +14,7 @@ Hi! My name is Eli and I'm currently a software developer at
 and love learning about new technologies.
 
 The main project that I work on right now is [sanic](https://github.com/channelcat/sanic) and
-I'm currently running a few otherpersonal projects like 
+I'm currently running a few other personal projects like 
 [nba_py](https://github.com/seemethere/nba_py) and
 [retry.it](https://github.com/seemethere/retry.it).
 
