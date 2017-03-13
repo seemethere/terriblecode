@@ -7,6 +7,9 @@ Categories = ["Development","python"]
 draft = false
 author = "Eli Uriegas"
 authorlink = "http://github.com/seemethere"
+aliases = [
+    "post/asynchronous-http-requests-in-python"
+]
 
 +++
 

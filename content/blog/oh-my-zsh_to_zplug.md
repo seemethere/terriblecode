@@ -8,6 +8,9 @@ author = "Eli Uriegas"
 authorlink = "http://github.com/seemethere"
 draft = false
 slug = "zplug-from-a-former-oh-my-zsh-user"
+aliases = [
+    "post/zplug-from-a-former-oh-my-zsh-user"
+]
 
 +++
 
