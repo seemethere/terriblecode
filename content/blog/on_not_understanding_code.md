@@ -1,30 +1,27 @@
 +++
 draft = true
 date = "2017-03-12T11:16:32-07:00"
-title = "On Being Pythonic"
-slug = "on_being_pythonic"
+title = "On not understanding code"
 author = "Eli Uriegas"
 
 +++
 
-# The Zen of Python
+# Figuring out code that seems mysterious
+We all come across code that seems to not make sense in what it does. Whether it's new
+syntax, black hole logic (logic that doesn't seem to make any sense), or *enterprise
+legacy code*, the feeling of not knowing how code works is aggravating. But alas, there
+are simple things we can do to remedy that.
 
-![Zen of Python](/img/zen_of_python.png)
+In this post I'll be going over a function that didn't make a whole lot of sense to me
+when I first read through it, how I dissected the function, and how I eventually rewrote
+it to make more sense to those who come after. I'll be heavily using an interpreter to
+figure out what different things do (like most Python developers should be doing) and if
+you don't have a preference I would absolutely recommend
+[ptpython](/blog/why-ptpython-is-the-only-repl-you-will-ever-need/).
 
-# What does it mean to by pythonic?
-
-When people first start learning Python, especially coming from other languages like a Java
-or a C. They have a hard time with this idea of *being pythonic*. At first, from an
-outside perspective, it can seem like most python developers are just being overly
-picky and that Python is just a toy language to write simple scripts in.
-
-> And they are all right, to an extent.
-
-To be pythonic we should look into how to improve code maintainability and ease of
-development without the behavior that can lead people to not like the Python community in
-the first place.
-
-# Let's refactor some code
+*Disclaimer: I do not have a background in embedded so the usage of bitwise operators was
+pretty foreign to me before this exercise, I'm also not going to pretend like I understand
+all of the math in this example either*
 
 ## Our coding example:
 So the below code tries to implement the Russian Peasant Algorithm that reduces exponent
@@ -46,6 +43,10 @@ This example heavily utilizes bitwise operators, like those that are done in the
 example. Bitwise operators, in my opinion, can be confusing to those coming into a code
 base and should be avoided at all possible. Let's take a look into a debugger and see
 what those actually do.
+
+If you're really interested in the low level interpretations of bitwise operators I
+would recommend the [wikipedia article](https://en.wikipedia.org/wiki/Bitwise_operation).
+But if you're like me and you just want to understand code as fast as possible read on!
 
 ## The `&` Operator
 
@@ -108,7 +109,8 @@ def my_pow(x, y):
 
 ### What does it do?
 The `>>` operator stands for bitwise shift in that it will shift an
-integer `n` many times.
+integer `n` many times. For a more in depth explanation see this
+[stackoverflow answer](http://stackoverflow.com/a/141873)
 
 Let's put this into an interpreter and see if we can see a pattern as well.
 
@@ -202,9 +204,9 @@ coming in might not know the `a <operator>= b` syntax but it does borrow from
 some other languages so the overlap may be there!
 
 # Conclusion
-Refactoring is important for maintainability and should not be discounted. Just
-because something works now does not mean that it will work forever so being
-able to easily discern logic is paramount.
-
-So the next time you need to use bitwise operators maybe look at it and ask if
-there is a different way to do it because chances are there really is.
+Understanding code is easy when we break down individual components and try to discern
+patterns based on inputs we already know. When a problem seems hard to solve, bisect it
+and see if it's easier when put into nice bite size pieces. Unfortunately not all
+problems can be solved like this and I'll go over how to solve problems that are a bit
+more involved when I go over my favorite debugging tool:
+[PUDB](https://github.com/inducer/pudb)
