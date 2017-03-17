@@ -1,6 +1,5 @@
 +++
-draft = true
-date = "2017-03-12T11:16:32-07:00"
+date = "2017-03-16"
 title = "On not understanding code"
 author = "Eli Uriegas"
 
