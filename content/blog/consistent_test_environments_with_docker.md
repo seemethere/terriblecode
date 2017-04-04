@@ -40,8 +40,8 @@ trying to run unittests.
 
 # So how do we implement it?
 
-Implementation of this type of unittesting was fairly trivial requiring only about 8 lines
-of real code.
+Implementation of this type of unittesting was fairly trivial requiring only about eight 
+lines of real *code*.
 
 ## The Dockerfile
 ```
@@ -71,8 +71,34 @@ test:
 ```
 
 The makefile combines 3 commands to make running the unittests possible. The first removes
-all pyc files contained in the application folder so that they don't interfere when we try
+all `pyc` files contained in the application folder so that they don't interfere when we try
 to run tests inside of the container. Next is the command that actually builds the test
 image using the `Dockerfile`. And last is the command that runs `tox` on the container
-which will show us how results of the tests.
+which will show us how results of actually running the tests.
 
+# So what's the drawbacks?
+So this approach is good but recreating images creates a lot of cruft after so many runs in
+the form of untagged images. Also a lot of exited containers are created as well which becomes
+really unsightly after running `docker ps -a` and seeing a bunch of exited containers.
+
+## How do we clean it up?
+A lot of blog posts have been written about how to clean up exited containers as well as
+untagged images with my favorite being one by 
+[Jim Hoskins](http://jimhoskins.com/2013/07/27/remove-untagged-docker-images.html). Just in
+case you don't want to read it though here are the commands.
+
+### For cleaning containers:
+```shell
+docker rm $(docker ps -a -q)
+```
+
+### For cleaning images:
+```shell
+docker rmi $(docker images | grep "^<none>" | awk "{print $3}")
+```
+
+# Conclusion
+Dockerizing environments for use with python testing is useful for those who dev on multiple different
+machines. It allows us to have a consistent testing environment that is nearly guaranteed to be the
+same almost every single time. Most importantly, it's easy. The ramp up time to get this type of
+workflow going is minimal so why wouldn't you be doing it?
