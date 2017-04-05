@@ -1,8 +1,8 @@
 +++
-date = "2017-03-29T14:38:39-05:00"
+date = "2017-04-04T19:48:47-05:00"
 title = "Dockerizing Python Test Environments"
 author = "Eli Uriegas"
-draft = true
+draft = false
 
 +++
 
