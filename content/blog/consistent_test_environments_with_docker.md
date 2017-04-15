@@ -1,6 +1,7 @@
 +++
 date = "2017-04-04T19:48:47-05:00"
 title = "Dockerizing Python Test Environments"
+tags = ["Python", "Docker"]
 author = "Eli Uriegas"
 draft = false
 
