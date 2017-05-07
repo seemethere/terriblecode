@@ -10,7 +10,7 @@ nopaging = true
 +++
 
 Hi! My name is Eli and I'm currently a software developer at 
-[Rackspace](https://www.rackspace.com/). I'm a big fan of Python
+[Docker](https://www.docker.com/). I'm a big fan of Python
 and love learning about new technologies.
 
 The main project that I work on right now is [sanic](https://github.com/channelcat/sanic) and
