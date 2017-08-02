@@ -21,4 +21,4 @@ I'm currently running a few other personal projects like
 I really like contributing to open source and managing open source projects as well 
 as interacting with the open source communities.
 
-If you need to contact me feel free to tweet at me [@Eli_ilE](https://twitter.com/Eli_ilE)!
+If you need to contact me feel free to tweet at me [@_seemethere](https://twitter.com/_seemethere)!
