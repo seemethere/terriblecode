@@ -9,7 +9,6 @@ publishdir = "public"
 author = "Eli Uriegas"
 title = "terriblecode"
 disqusshortname = ""
-googleAnalytics = "UA-82077088-1"
 newContentEditor = "nvim"
 pluralizelisttitles = false
 
