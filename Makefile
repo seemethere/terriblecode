@@ -1,4 +1,5 @@
-DOCKER_RUN=docker run --rm -p 1313:1313 -v "$(CURDIR)":/v -w /v seemethere/hugo-docker:latest
+HUGO_IMAGE?=seemethere/hugo-docker
+DOCKER_RUN=docker run --rm -p 1313:1313 -v "$(CURDIR)":/v -w /v $(HUGO_IMAGE)
 
 all: clean public
 
