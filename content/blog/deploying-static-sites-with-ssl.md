@@ -9,16 +9,9 @@ hacker_news_id = ""
 
 # Context
 
-SSL is increasingly important in today's web development workflow and no,
-personal blogs like this one are not immune to the wave. With knowing that
-Google Chrome, the most used web browser, was going to start [flagging
-websites](https://security.googleblog.com/2016/09/moving-towards-more-secure-web.html)
-that do not have SSL as unsafe, I knew it would be only be a matter of time
-before I had to implement SSL support for this blog.
+SSL is increasingly important in today's web development workflow.  No site, however small, is immune to the pitfalls of ignoring such knowledge - not evepersonal blogs like this one.  When Google announced that its Chrome web browser would begin [flagging non-SSL sites as "unsafe"](https://security.googleblog.com/2016/09/moving-towards-more-secure-web.html); I knew it would be only be a matter of time before I would need to implement an SSL solution for this blog.
 
-I put it off for a long time but a couple factors (including my blog breaking
-due to a [Hugo](http://gohugo.io/) upgrade) ultimately led me to redo the
-infrastructure of my [terriblecode](https://terriblecode.com).
+I put it off for a long time but a couple factors (including my blog breaking due to a [Hugo](http://gohugo.io/) upgrade) ultimately led me to redo the infrastructure of [terriblecode](https://terriblecode.com).
 
 > *NOTE*: This blog post does not cover how to setup a server or a domain name with a DNS.
 > For a tutorial on that I highly recommend
@@ -26,29 +19,23 @@ infrastructure of my [terriblecode](https://terriblecode.com).
 
 # The New Criteria
 
-So with the decision to redo the infrastructure, I had to lay a couple of ground
-rules:
+So with the decision to redo the infrastructure, I had to lay a couple of ground rules:
 
-1. It had to have SSL that was easy to setup
+1. It had to have SSL which would be easy to setup
 2. It had to use [Docker](https://docker.com)
-3. It had to work off of git pushes
+3. It had to work via git pushes
 
-# Getting SSL, Easily
+# Getting SSL, the easy way
 
-With the advent of [letsencrypt](https://letsencrypt.org/), obtaining a
-browser trusted certificate is as simple as running an automated script.
+With the advent of [letsencrypt](https://letsencrypt.org/), obtaining a browser trusted certificate is as simple as running a script.
 
-> In comes [Caddy](https://caddyserver.com/)
+> And thus arrives: [Caddy](https://caddyserver.com/)
 
 ![Caddy Server](https://cloud.githubusercontent.com/assets/1128849/25305033/12916fce-2731-11e7-86ec-580d4d31cb16.png)
 
-Caddy is awesome because its syntax is simple and getting certificates
-is as easy as entering an email address.
+Using simple, direct syntax, Caddy has made getting SSL certificates as easy as entering an email address.
 
-The blog post your reading right now is served statically by a Caddy Server
-that grabbed the SSL certificate on it's own with a literal 4 line
-configuration file, a thing I never thought was possible after using other
-web servers for so long.
+The blog post you're currently reading is being statically served via Caddy, using a simple (literally, four lines long) configuration file to autonomously grab the SSL certificate.  I could never have dreamed of such a possibility after using other web servers for so long.
 
 Would you believe that this is the whole configuration file?
 
@@ -63,33 +50,20 @@ terriblecode.com {
 
 ![Moby Dock](https://i1.wp.com/blog.docker.com/wp-content/uploads/0ca21ece-c73d-46d9-bd02-a0f1dd3cf042.jpg?resize=425%2C365&ssl=1)
 
-So I've been using Hugo as my static site generator for over a year. I've
-been ecstatic with the results but I've never liked the idea of having to
-install the binary locally (which ultimately led to me breaking my
-blog a few weeks ago) and have always felt like there was a better
-way to do it.
+I've been using Hugo as my static site generator for over a year. On the whole, I've found it to be quite good, but it isn't perfect. I've never liked the idea of having to install a local binary.  This was the issue which ultimately led to me breaking my blog a few weeks ago.  I have always felt like there had to be a better way to do it.
 
-I found a few Hugo images on Docker Hub already but they were too big in
-size for my tastes and I thought I could slim down the Docker image.
-I utilized [multi-stage Docker builds](https://docs.docker.com/engine/userguide/eng-image/multistage-build/)
-to [build an image](https://hub.docker.com/r/seemethere/hugo-docker/tags/)
-that was **25x** smaller than the most popular Hugo image available on Docker Hub!
+I found a few Hugo images on Docker Hub already, but they were too big in size for my tastes and I thought I could slim down the Docker image. I utilized [multi-stage Docker builds](https://docs.docker.com/engine/userguide/eng-image/multistage-build/) to [build an image](https://hub.docker.com/r/seemethere/hugo-docker/tags/) which was **25x** smaller than the most popular Hugo image available on Docker Hub!
 
-For implementation on this portion please take a look at the Github
-repository for [hugo-docker](https://github.com/seemethere/hugo-docker).
+For implementation on this portion please take a look at the Github repository for [hugo-docker](https://github.com/seemethere/hugo-docker).
 
-For those asking, I also tried this with Caddy but could not achieve the
-same result due to `ca-certificates` needing to be installed for SSL to
-function correctly. I eventually settled on
-[abiosoft/caddy](https://hub.docker.com/r/abiosoft/caddy/) as my Caddy image.
+For those asking, I also tried this with Caddy but could not achieve the same result due to `ca-certificates` needing to be installed for SSL to function correctly. I eventually settled on [abiosoft/caddy](https://hub.docker.com/r/abiosoft/caddy/) as my Caddy image.
 
 # Deploying with Docker
 
 
 ## Generating the site
 
-So for static sites it's fairly simple to generate a site, using my image you
-can generate site like so (from a Makefile in the root directory of your site):
+So for static sites it's fairly simple to generate a site, using my image you can generate site like so (from a Makefile in the root directory of your site):
 
 **/build/Makefile**
 ```Makefile
@@ -158,8 +132,7 @@ files in `/public`.
 
 # Using Git Hooks to Deploy Changes
 
-So far we've talked about how to get certificates and how to build and
-deploy infrastructure using Docker, but what about pushing changes up?
+So far we've talked about how to get certificates and how to build and deploy infrastructure using Docker, but what about pushing up changes?
 
 What if deploying your static site could be as simple as:
 
@@ -171,15 +144,13 @@ git push live
 
 > *NOTE*: [A primer on Git hooks may be needed](https://git-scm.com/book/gr/v2/Customizing-Git-Git-Hooks)
 
-So all of the magic of being able to do a `git push live` is located in a file
-called `post-recieve`. Basically what git does is run `post-recieve` as a shell
-file after receiving files through a `git push`.
+So all of the magic of being able to do a `git push live` is located in a file called `post-recieve`. Basically, what git does is run `post-recieve` as a shell command after receiving files through a `git push`.
 
 For our scenario we'll assume that after a push we want three things to happen:
 
 1. Rebuild our static site
-* Deploy our static site to the `/public` directory (if the rebuild passes)
-* Launch a container that serves `/public` to the outside world with SSL
+2. Deploy our static site to the `/public` directory (if the rebuild passes)
+3. Launch a container that serves `/public` to the outside world with SSL
   * noop if the container is already running
 
 The `post-receive` script for terriblecode.com looks like:
@@ -205,20 +176,16 @@ if ! docker ps -a | grep "$CADDY_CONTAINER_NAME" >/dev/null; then
 fi
 ```
 
-Some of the Makefile targets might look familiar from the past sections! It's always
-to use Makefiles to break down problems into bite sized chunks so that even if one fails
-it's always fairly simple to debug and re-run locally.
+Some of the Makefile targets might look familiar from the past sections! I've found it best to use Makefiles to help break problems into bite sized chunks so that even if one fails it's usually fairly simple to debug and re-try locally.
 
 # Closing thoughts
 
-All in all the transition took about 2 nights worth of hair pulling to complete from
-building out the infrastructure to actual deploying the website with the certificates.
+All-in-all, the transition took about two nights worth of hair pulling to complete.  This included building-out the infrastructure to the actual deployment of the website with the certificates.
+
 Coming out of the transition I learned a few thoughts:
 
 * Docker makes it easy to deploy this type of site on any Linux distribution that is supported by Docker
 * Caddy makes it extremely easy to get certificates and serve static sites
 * I wish more people knew how Makefiles worked so mine wouldn't look so much like magic
 
-Tweet me [@\_seemethere](https://twitter.com/\_seemethere) if you have any
-questions regarding this blog post, if you really liked the blog post, or if
-you're needing help setting your own blog!
+Tweet me [@\_seemethere](https://twitter.com/\_seemethere) if you have any questions regarding this blog post, if you really liked the blog post, or if you find your self in need of some assistance setting up a blog of your own!
