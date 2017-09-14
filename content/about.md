@@ -10,8 +10,8 @@ nopaging = true
 +++
 
 Hi! My name is Eli and I'm currently a software developer at 
-[Docker](https://www.docker.com/). I'm a big fan of Python
-and love learning about new technologies.
+[Docker](https://www.docker.com/). I currently write a ton of shell scripts
+and do a bunch of automation surrounding releasing [Docker CE](https://github.com/docker/docker-ce)
 
 The main project that I work on right now is [sanic](https://github.com/channelcat/sanic) and
 I'm currently running a few other personal projects like 
