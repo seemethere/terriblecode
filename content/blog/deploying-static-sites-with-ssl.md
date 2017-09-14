@@ -1,5 +1,5 @@
 +++
-title = "Deploying Static Sites With SSL"
+title = "Deploying Static Sites With Docker and SSL"
 date = 2017-09-14T21:32:17-07:00
 tags = ["Docker", "SSL", "Meta"]
 description = "Static sites are easy, but this setup makes it even easier"
