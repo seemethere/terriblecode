@@ -63,7 +63,7 @@ For those asking, I also tried this with Caddy but could not achieve the same re
 
 ## Generating the site
 
-So for static sites it's fairly simple to generate a site, using my image you can generate site like so (from a Makefile in the root directory of your site):
+So for static sites it's fairly simple to generate a site, using my image you can generate a site like so (from a Makefile in the root directory of your site):
 
 **/build/Makefile**
 ```Makefile
@@ -75,7 +75,7 @@ public:
 > if you are not familiar with this syntax.
 
 I generate the public directory using the Docker image I showed before,
-and the utilize `rsync` to update any changed files to a `/public`
+and then utilize `rsync` to update any changed files to a `/public`
 directory at the root of the file system.
 
 **/infra/Makefile**
@@ -92,7 +92,7 @@ directory at the root of the file system.
 
 Serving the site is fairly simple once you generate the static pages.
 
-For this I have another couple of Makefile targets:
+For this I have a couple of Makefile targets:
 
 **/infra/Makefile**
 ```Makefile
@@ -182,10 +182,12 @@ Some of the Makefile targets might look familiar from the past sections! I've fo
 
 All-in-all, the transition took about two nights worth of hair pulling to complete.  This included building-out the infrastructure to the actual deployment of the website with the certificates.
 
-Coming out of the transition I learned a few thoughts:
+Coming out of the transition I had a few thoughts:
 
 * Docker makes it easy to deploy this type of site on any Linux distribution that is supported by Docker
 * Caddy makes it extremely easy to get certificates and serve static sites
 * I wish more people knew how Makefiles worked so mine wouldn't look so much like magic
 
-Tweet me [@\_seemethere](https://twitter.com/\_seemethere) if you have any questions regarding this blog post, if you really liked the blog post, or if you find your self in need of some assistance setting up a blog of your own!
+Tweet me [@\_seemethere](https://twitter.com/\_seemethere) if you have any questions regarding this blog post, if you really liked the blog post, or if you find yourself in need of some assistance setting up a blog of your own!
+
+Editing help provided by [@petezhut](https://github.com/petezhut) and [@mdmedey](https://github.com/mdmedey)
