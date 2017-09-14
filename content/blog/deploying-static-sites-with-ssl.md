@@ -191,3 +191,7 @@ Coming out of the transition I had a few thoughts:
 Tweet me [@\_seemethere](https://twitter.com/\_seemethere) if you have any questions regarding this blog post, if you really liked the blog post, or if you find yourself in need of some assistance setting up a blog of your own!
 
 *Editing help provided by [@petezhut](https://github.com/petezhut) and [@mdmedey](https://github.com/mdmedey)*
+
+> If you are interested in the full code for setting up this infrastructure check out the Github repositories at:
+> * https://github.com/seemethere/terriblecode
+> * https://github.com/seemethere/terriblecode-infra
