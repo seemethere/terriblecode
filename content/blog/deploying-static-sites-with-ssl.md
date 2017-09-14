@@ -192,5 +192,7 @@ Tweet me [@\_seemethere](https://twitter.com/\_seemethere) if you have any quest
 *Editing help provided by [@petezhut](https://github.com/petezhut) and [@mdmedey](https://github.com/mdmedey)*
 
 > If you are interested in the full code for setting up this infrastructure check out the Github repositories at:
+
 > * https://github.com/seemethere/terriblecode
+
 > * https://github.com/seemethere/terriblecode-infra
