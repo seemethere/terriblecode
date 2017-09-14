@@ -14,8 +14,7 @@ SSL is increasingly important in today's web development workflow.  No site, how
 I put it off for a long time but a couple factors (including my blog breaking due to a [Hugo](http://gohugo.io/) upgrade) ultimately led me to redo the infrastructure of [terriblecode](https://terriblecode.com).
 
 > *NOTE*: This blog post does not cover how to setup a server or a domain name with a DNS.
-> For a tutorial on that I highly recommend
-> [DigitalOcean's documentation](https://www.digitalocean.com/community/tutorials/how-to-set-up-a-host-name-with-digitalocean)
+> For a tutorial on that I highly recommend [DigitalOcean's documentation](https://www.digitalocean.com/community/tutorials/how-to-set-up-a-host-name-with-digitalocean)
 
 # The New Criteria
 
@@ -74,9 +73,7 @@ public:
 > *NOTE*: You may need a primer on [`docker run`](https://docs.docker.com/engine/reference/commandline/run/)
 > if you are not familiar with this syntax.
 
-I generate the public directory using the Docker image I showed before,
-and then utilize `rsync` to update any changed files to a `/public`
-directory at the root of the file system.
+I generate the public directory using the Docker image I showed before, and then utilize `rsync` to update any changed files to a `/public` directory at the root of the file system.
 
 **/infra/Makefile**
 ```Makefile
