@@ -1,4 +1,4 @@
-baseurl = "http://terriblecode.com/"
+baseurl = "https://terriblecode.com/"
 theme = "cocoa-eh"
 builddrafts = false
 canonifyurls = true
