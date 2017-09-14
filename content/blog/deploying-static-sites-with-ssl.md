@@ -9,7 +9,7 @@ hacker_news_id = ""
 
 # Context
 
-SSL is increasingly important in today's web development workflow.  No site, however small, is immune to the pitfalls of ignoring such knowledge - not evepersonal blogs like this one.  When Google announced that its Chrome web browser would begin [flagging non-SSL sites as "unsafe"](https://security.googleblog.com/2016/09/moving-towards-more-secure-web.html); I knew it would be only be a matter of time before I would need to implement an SSL solution for this blog.
+SSL is increasingly important in today's web development workflow.  No site, however small, is immune to the pitfalls of ignoring such knowledge - not even personal blogs like this one.  When Google announced that its Chrome web browser would begin [flagging non-SSL sites as "unsafe"](https://security.googleblog.com/2016/09/moving-towards-more-secure-web.html); I knew it would be only be a matter of time before I would need to implement an SSL solution for this blog.
 
 I put it off for a long time but a couple factors (including my blog breaking due to a [Hugo](http://gohugo.io/) upgrade) ultimately led me to redo the infrastructure of [terriblecode](https://terriblecode.com).
 
