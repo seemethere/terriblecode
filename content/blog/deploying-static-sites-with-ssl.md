@@ -3,8 +3,9 @@ title = "Deploying Static Sites With Docker and SSL"
 date = 2017-09-14T21:32:17-07:00
 tags = ["Docker", "SSL", "Meta"]
 description = "Static sites are easy, but this setup makes it even easier"
-hacker_news_id = ""
+hacker_news_id = "15251399"
 +++
+
 
 # Context
 
@@ -196,3 +197,10 @@ Tweet me [@\_seemethere](https://twitter.com/\_seemethere) if you have any quest
 > * https://github.com/seemethere/terriblecode
 
 > * https://github.com/seemethere/terriblecode-infra
+
+<blockquote class="reddit-card" data-card-created="1505415977"><a href="https://www.reddit.com/r/programming/comments/704e83/deploying_static_sites_with_docker_and_ssl/?ref=share&ref_source=embed">Deploying Static Sites With Docker and SSL</a> from <a href="http://www.reddit.com/r/programming">programming</a></blockquote>
+<script async src="//embed.redditmedia.com/widgets/platform.js" charset="UTF-8"></script>
+
+<blockquote class="twitter-tweet" data-cards="hidden" data-lang="en"><p lang="en" dir="ltr">Deploying Static Sites with <a href="https://twitter.com/hashtag/Docker?src=hash">#Docker</a> and <a href="https://twitter.com/hashtag/SSL?src=hash">#SSL</a>! <a href="https://twitter.com/hashtag/hugo?src=hash">#hugo</a> <a href="https://twitter.com/hashtag/golang?src=hash">#golang</a> <a href="https://twitter.com/hashtag/programming?src=hash">#programming</a> <a href="https://twitter.com/hashtag/blog?src=hash">#blog</a><a href="https://t.co/mWNmxFD3j0">https://t.co/mWNmxFD3j0</a></p>&mdash; Eli Uriegas (@_seemethere) <a href="https://twitter.com/_seemethere/status/908405454174273536">September 14, 2017</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
