@@ -1,5 +1,6 @@
 baseurl = "https://terriblecode.com/"
 theme = "cocoa-eh"
+disablefancyfonts = true
 builddrafts = false
 canonifyurls = true
 contentdir = "content"
