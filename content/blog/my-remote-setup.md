@@ -8,7 +8,27 @@ description = "Moving my development workflow from my local workstation to one i
 hacker_news_id = ""
 +++
 
-[//]: # (TODO: Write an introduction)
+Have you ever been in a meeting that you didn't really want to be included in?
+So you're working and go to compile something and all of a sudden all 3 billion
+of your laptop's fans start to fire at full speed. Everyone in the room
+suddenly looks at you and now they all know you weren't paying attention
+
+> What if there was a way to run things without having your laptop sound like
+> it just started its jet engines?
+
+# Allow me to introduce you to the cloud
+
+![the cloud](https://www.explainxkcd.com/wiki/images/2/28/the_cloud.png)
+
+So when I started working at [docker](https://docker.com) I was given access
+to launch instances on EC2 so decided from my first day that I would do most
+of my dev work on a remote instance.
+
+A TL;DR of this post is:
+* `tmux` is awesome
+* `(neo)vim` is the best
+* `ssh-agent` forwarding is essential for remote instance working
+* `fedora` has great package maintainers
 
 # Learning to love `tmux`
 
@@ -152,4 +172,19 @@ to compile my stuff from source anymore because there's already packages up for 
 I wouldn't run production servers on Fedora, but as far as my development OS goes it has
 gotten my vote.
 
-[//]: # (TODO: Write a conclusion, include social links)
+# How can you get started?
+Well first and foremost you can spin up an instance on a cloud provider that's
+a bit more developer/first timer friendly like DigitalOcean for something as
+cheap as [$5 a month](https://www.digitalocean.com/pricing/), which is how I run
+this site!
+
+After that you can see my personal setup on 
+[github](https://github.com/seemethere/dotfiles). I wouldn't suggest a *1:1*
+copy over but you should use it as inspiration on how to start your own.
+
+And then just start developing! When it gets hard, and yes it will get hard to
+move from a GUI based environment to a terminal based environment, just keep
+going! The more you practice with it the better you'll get and before you know
+it you'll be surprising yourself with how much you know.
+
+Have any questions? ping me over at [@\_seemethere](https://twitter.com/_seemethere)
