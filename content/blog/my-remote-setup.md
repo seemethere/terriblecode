@@ -1,7 +1,6 @@
 +++
 title = "Developing on a remote instance"
-date = 2018-06-27T07:56:49-07:00
-draft = true
+date = 2018-06-28T16:18:09-04:00
 meta_img = "/images/image.jpg"
 tags = ["productivity"]
 description = "Moving my development workflow from my local workstation to one in the cloud!"
