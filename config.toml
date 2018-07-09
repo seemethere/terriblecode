@@ -12,6 +12,7 @@ title = "terriblecode"
 disqusshortname = ""
 newContentEditor = "nvim"
 pluralizelisttitles = false
+googleanalytics = "UA-82077088-1"
 
 [permalinks]
 blog = "blog/:slug/"
