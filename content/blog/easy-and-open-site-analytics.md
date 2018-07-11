@@ -3,19 +3,28 @@ title = 'Easy and Open Website Analytics'
 date = 2018-07-11T09:44:08-07:00
 draft = true
 meta_img = "/img/fathom.png"
-tags = ["devops", "infra"]
+tags = ["infra"]
 description = "Is Google Analytics too complicated for you? Use something open source and free like Fathom!"
 hacker_news_id = ""
 lobsters_id = ""
 +++
 
+![why](https://media.giphy.com/media/kEY1upmMn0DVC/giphy.gif)
+
 # Some context first
 
-Google Analytics is a great tool! It's got real time analytics, it'll tell you
+I've been using Google Analytics to track traffic for [terriblecode
+](https://terriblecode.com) for the better part of 2 years and it's been an
+*alright experience*.
+
+Google Analytics has got real time analytics, it'll tell you
 how much your page is worth (*$$*), and it'll even do nice things like provide
 graphs etc. But honestly, Google Analytics has always felt like a bear, with a
-UI that rivals AWS' console for usability. So for me, I've always been looking
-out for something that I can:
+UI that rivals AWS' console for usability. Also, when you're using a Google
+product that is free to use you can almost be certain that Google is using your
+data somewhere, which doesn't always sit right with me.
+
+So for me, I've been looking out for something that I can:
 
 * Host myself so that I own my data
 * Have a simple dashboard
