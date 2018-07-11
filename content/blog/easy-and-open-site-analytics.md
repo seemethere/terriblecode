@@ -92,6 +92,9 @@ services:
             - "MYSQL_USER=fathom"
 ```
 
+**NOTE**: The `FATHOM_DATABASE_PASSWORD` and `MYSQL_PASSWORD` are defined in
+a separate `.env` file.
+
 Unfortunately it isn't possible to add users to your `fathom` application
 without invoking the `fathom register` command from the CLI, so to get
 around that I build my own Docker image with my own user like so:
