@@ -1,7 +1,6 @@
 +++
 title = 'Easy and Open Website Analytics'
 date = 2018-07-11T09:44:08-07:00
-draft = true
 meta_img = "/img/fathom.png"
 tags = ["infra"]
 description = "Is Google Analytics too complicated for you? Use something open source and free like Fathom!"
