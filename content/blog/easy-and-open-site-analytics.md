@@ -1,8 +1,8 @@
 +++
-title = 'Easy and Open Website Analytics'
+title = 'Easy and Open Website Analytics with Fathom and Docker'
 date = 2018-07-11T09:44:08-07:00
 meta_img = "/img/fathom.png"
-tags = ["infra"]
+tags = ["infra", "docker"]
 description = "Is Google Analytics too complicated for you? Use something open source and free like Fathom!"
 hacker_news_id = "17510667"
 lobsters_id = ""
