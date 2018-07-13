@@ -149,3 +149,5 @@ be noted that the outcomes of the 2 programs are exactly the same.
 
 So while asynchronous programming may seem new and mysterious to a lot of developers out there.
 The performance benefits are very real and tangible right now.
+
+Have any questions? ping me over at [@\_seemethere](https://twitter.com/_seemethere)
