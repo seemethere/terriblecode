@@ -1,7 +1,6 @@
 +++
 title = 'How Docker Images Work: Union File Systems for Dummies'
-date = 2018-07-18T19:32:09-07:00
-draft = true
+date = 2018-07-24T08:50:00-00:00
 tags = ["docker", "linux"]
 description = "Ever wonder how Docker images work? Well it's called a Union File System and it's not as hard as it sounds!"
 
