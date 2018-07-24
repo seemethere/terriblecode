@@ -5,7 +5,7 @@ tags = ["docker", "linux"]
 description = "Ever wonder how Docker images work? Well it's called a Union File System and it's not as hard as it sounds!"
 
 # For twitter cards, see https://github.com/mtn/cocoa-eh-hugo-theme/wiki/Twitter-cards
-meta_img = "https://i0.wp.com/blog.docker.com/media/2015/04/sticker-02-15-2.png"
+meta_img = "/img/overlay1.png"
 
 # For hacker news and lobsters builtin links, see github.com/mtn/cocoa-eh-hugo-theme/wiki/Social-Links
 hacker_news_id = ""
