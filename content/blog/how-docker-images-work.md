@@ -2,11 +2,11 @@
 title = 'How Docker Images Work: Union File Systems for Dummies'
 date = 2018-07-18T19:32:09-07:00
 draft = true
-tags = ["docker"]
-description = ""
+tags = ["docker", "linux"]
+description = "Ever wonder how Docker images work? Well it's called a Union File System and it's not as hard as it sounds!"
 
 # For twitter cards, see https://github.com/mtn/cocoa-eh-hugo-theme/wiki/Twitter-cards
-meta_img = "/images/image.jpg"
+meta_img = "https://i0.wp.com/blog.docker.com/media/2015/04/sticker-02-15-2.png"
 
 # For hacker news and lobsters builtin links, see github.com/mtn/cocoa-eh-hugo-theme/wiki/Social-Links
 hacker_news_id = ""
@@ -46,11 +46,24 @@ the top most layer superseding any similar files found in the file systems.
 For this blog post I'm going to be focusing on the `overlay(fs)` since it's
 the recommended storage driver currently for Docker (as of 18.06.0-ce).
 
-# So How Does it Work? (With a metaphor)
+# So How Does it Work?
 
-* TODO: Fill this section out with a better metaphor
+> WARNING: Probably a poor comparison in plain English
 
-# So How Does it Work? (Under the hood)
+So imagine you're in grade school again and the teacher pulls out the overhead
+projector again. If you're not familiar with what an overhead projector looks
+like, consult this image from wikipedia:
+
+![overhead i guess](
+https://upload.wikimedia.org/wikipedia/commons/7/72/OHP-sch.JPG)
+
+So an overlay(fs) works very similarly to overhead projection sheets where you
+have a base sheet that displays something like a worksheet and a sheet above it
+where you can take your own notes. You can separate the two sheets and you still
+have your base sheet and your own notes (the difference between the
+base and your notes).
+
+# So How Does it Work? (From a technical perspective)
 
 ## Layers Involved
 
@@ -67,7 +80,7 @@ This is where the base files for your file system are stored, this layer (
 from the overlay view) is read only. If you want to think about this in terms
 of Docker images you can think of this layer as your base image.
 
-## Overlay Layer 
+## Overlay Layer
 
 The Overlay layer is where the user operates, it initially offers a view of
 the base layer and gives the user the ability to interact with files and even
@@ -110,7 +123,85 @@ the diff layer's file is used instead as it is the higher layer.
 I also created another file named `fruit/pear` and we can see that it only
 exists in the diff layer.
 
+# Can I try this on my own?
+
+Yup! Setting up an overlay(fs) is actually really easy!
+
+First in any directory create your layers like so:
+
+```bash
+mkdir base diff overlay workdir
+```
+
+You should probably add some files in the base directory, just for
+the example:
+
+```bash
+echo "this is my base layer" > base/file1
+```
+
+Next mount those directories:
+
+```bash
+sudo mount \
+    -t overlay \
+    -o lowerdir=base,upperdir=diff,workdir=workdir \
+    overlay \
+    overlay
+```
+
+And **Bam**! You have an overlay(fs) in the `overlay` directory!
+
+Do a `cd overlay` and start adding files at will and see them
+start popping up in your `diff` directory!
+
+When you're done, you can get rid of the overlay(fs) by `cd`'ing out of
+the overlay directory and running:
+
+```bash
+sudo umount overlay
+```
+
 # So how does this relate back to Docker Images?
 
-* TODO: Add a relation back to docker images
-  * Docker Image Layers are just diff layers stacked on top of each other
+Docker implements the overlay2 storage driver in a file called:
+[daemon/graphdriver/overlay2/overlay.go](
+https://github.com/moby/moby/blob/master/daemon/graphdriver/overlay2/overlay.go)
+
+Just highlighting some lines in that file from [line 580-621](https://github.com/moby/moby/blob/1ef1cc8388165b2b848f9b3f53ec91c87de09f63/daemon/graphdriver/overlay2/overlay.go#L580-L621)
+
+```go
+    opts := fmt.Sprintf("lowerdir=%s,upperdir=%s,workdir=%s", strings.Join(absLowers, ":"), path.Join(dir, "diff"), path.Join(dir, "work"))
+    mountData := label.FormatMountLabel(opts, mountLabel)
+    mount := unix.Mount
+    mountTarget := mergedDir
+
+    ...
+
+
+    if err := mount("overlay", mountTarget, "overlay", 0, mountData); err != nil {
+```
+
+The implementation is basically what we did by hand above except with a few
+extra things like handling multiple base layers and handling directory
+permissions!
+
+So Docker Images are actually just multiple Union File Systems stacked on top of
+each other!
+
+![docker view](
+https://docs.docker.com/storage/storagedriver/images/container-layers.jpg)
+
+For a more in depth view you can consult the official [Docker docs](
+https://docs.docker.com/storage/storagedriver/#images-and-layers)!
+
+# Conclusion
+
+So that wasn't so bad was it? A lot of the _magical_ things that make up our
+everyday tools are just basic tools that are stringed together to make our
+lives more convenient! So if you have anything that seems a bit out of your
+grasp just take a bit of a deeper look and you'll be surprised at what you
+find.
+
+Have any questions? ping me over at [@\_seemethere
+](https://twitter.com/_seemethere)
