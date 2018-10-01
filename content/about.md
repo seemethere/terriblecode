@@ -9,9 +9,8 @@ nopaging = true
 
 +++
 
-Hi! My name is Eli and I'm currently a software developer at 
-[Docker](https://www.docker.com/). I currently write a ton of shell scripts
-and do a bunch of automation surrounding releasing [Docker CE](https://github.com/docker/docker-ce)
+Hi! My name is Eli and I'm a software developer who likes to do a lot of things
+surrounding automation.
 
 The main project that I work on right now is [sanic](https://github.com/channelcat/sanic) and
 I'm currently running a few other personal projects like 
