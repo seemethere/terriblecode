@@ -1,9 +1,9 @@
 +++
 title = 'Extracing RPM Build Dependencies From RPM Spec Files'
-date = 2019-01-08T19:47:19-08:00
-draft = true
-tags = ["tags"]
-description = "Desc"
+date = 2019-01-10T19:47:19-08:00
+draft = false
+tags = ["rpm", "packaging"]
+description = "Extracting and installing build dependencies is a pain, make it easier on yourself with this one simple trick"
 
 # For twitter cards, see https://github.com/mtn/cocoa-eh-hugo-theme/wiki/Twitter-cards
 meta_img = "/images/image.jpg"
