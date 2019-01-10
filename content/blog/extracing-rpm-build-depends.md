@@ -1,6 +1,6 @@
 +++
 title = 'Extracing RPM Build Dependencies From RPM Spec Files'
-date = 2019-01-10T19:47:19-08:00
+date = 2019-01-09T15:07:24-06:00
 draft = false
 tags = ["rpm", "packaging"]
 description = "Extracting and installing build dependencies is a pain, make it easier on yourself with this one simple trick"
