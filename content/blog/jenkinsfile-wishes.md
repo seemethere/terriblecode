@@ -1,7 +1,7 @@
 +++
 title = 'Feature Request: Parallel Stage Generation for Declarative Jenkins Pipelines'
-date = 2019-01-26T11:03:06-08:00
-draft = true
+date = 2019-02-26T11:03:06-08:00
+draft = false
 tags = ["tags"]
 description = "Desc"
 
