@@ -137,7 +137,7 @@ And that's it! Really that's it. No need to do anything else.
 
 ## Wrapping up
 
-So it's pretty simple to actually go abour running your minecraft server in
+So it's pretty simple to actually go about running your minecraft server in
 the cloud! Have fun, I might do a follow up on how to run multiple servers 
 with actual domain names, but for right now I'm just having fun playing
 `Witchcraft and Wizardry`.
