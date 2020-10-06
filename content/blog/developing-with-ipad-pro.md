@@ -18,6 +18,10 @@ to use for terminal emulation, and is the magic keyboard case for the iPad
 actually usable for a developer who mostly types on mechanical keyboards. So
 without further ado, here is my current developer setup for my iPad Pro!
 
+
+![iPad Pro](https://imgur.com/iBv5L1p)
+
+
 # iPad Pro Specific Things
 
 ## Which terminal emulator should I use?
@@ -31,6 +35,10 @@ is that the developer of Blink Shell has also made a slew of color schemes
 and fonts available on Github for anyone else to use / iterate upon, which
 is always a plus.
 
+
+![Blink Shell](https://imgur.com/YcD5L6u)
+
+
 ## How's the keyboard case for the iPad Pro?
 
 Coming from someone who is pretty picky about their keyboard situation, the
@@ -39,6 +47,11 @@ Macbook Pro magic keyboard. It feels satisfyingly clicky with enough action
 in the keys to make you feel as though you've actually pushed a button.
 
 ### But what about no ESC key >:(
+
+
+![No ESC](https://imgur.com/QGxsb9l)
+
+
 The lack of an `ESC` key is probably the most disappointing thing about the
 keyboard but it's still possible to function with my setup without a dedicated
 `ESC` key. Blink shell does have a few options for mapping `CAPS-LOCK` to `ESC`
