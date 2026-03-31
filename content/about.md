@@ -12,6 +12,8 @@ nopaging = true
 Hi! My name is Eli and I'm a software developer who likes to do a lot of things
 surrounding automation.
 
+I work on pytorch now!
+
 The main project that I work on right now is [sanic](https://github.com/channelcat/sanic) and
 I'm currently running a few other personal projects like 
 [nba_py](https://github.com/seemethere/nba_py) and
